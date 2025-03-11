@@ -1,3 +1,3 @@
 function myFunction() {
-    alert("Hello, JavaScript!");
+    alert("Tack för meddelandet!");
   }
