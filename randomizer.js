@@ -11,6 +11,6 @@ function shuffleImg() {
         let j = Math.floor(Math.random() * (i + 1));
         [arr[i], arr[j]] = [arr[j], arr[i]]; // Swap elements
     }
-    items.forEach(item => img.appendChild(items));
-
+    items.forEach(items => img.appendChild(items));
+    window.onload = shuffleGrid;
 }
