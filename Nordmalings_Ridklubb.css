@@ -336,11 +336,11 @@ video {
     font-weight: bolder;
 }
 
-tr {
-    margin: .5rem 0;
+table {
+    border-spacing: .5rem;
 }
 
-th {
+th, td {
     text-align: left;
     margin-bottom: 1rem;
 }
