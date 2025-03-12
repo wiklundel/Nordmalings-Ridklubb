@@ -1,3 +1,6 @@
+const form = document.querySelector('form');
+form.addEventListener('submit', myFunction);
+
 function myFunction() {
     alert("Tack för meddelandet!");
   }
@@ -5,17 +8,21 @@ function myFunction() {
 // Function to shuffle the array (Fisher-Yates Shuffle)
 function shuffleImg() {
     
-    const img = document.getElementsByClassName("hästbilder");
+    const containers = document.getElementsByClassName("hästbilder");
 
-    for (let container of imgContainers) {
+    for (let container of containers) {
         const items = Array.from(container.children); // Convert HTMLCollection to an array
 
-        for (let i = items.length - 1; i > 0; i--) {
-            let j = Math.floor(Math.random() * (i + 1));
-            [arr[i], arr[j]] = [arr[j], arr[i]]; // Swap elements
-        }
-        items.forEach(item => container.appendChild(item));
-    }
+        const newItems = [];
 
-    window.onload = shuffleImg;
+        while (items.length > 0 ) {
+            let j = Math.floor(Math.random() * items.length);
+            let v = items[j];
+            items.splice(j, 1);
+
+            newItems.push(v);
+        }
+        newItems.forEach(item => container.appendChild(item));
+    }
 }
+window.onload = shuffleImg;
