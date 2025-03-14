@@ -38,7 +38,6 @@ window.onload = shuffleImg;
 // sidebar
 const btn = document.querySelector('.btn');
 const sidemenu = document.querySelector('.sidemenu');
-const sidebar = document.querySelector('#sidebar');
 
 if(btn && sidemenu) {
     function updateIcon() {
@@ -50,17 +49,10 @@ if(btn && sidemenu) {
     }
     updateIcon();
     
-    if(window.matchMedia('(max-width: 900px)').matches && btn && sidemenu) {
-        btn.addEventListener('click', function () {
-            sidemenu.classList.toggle('active');
-            updateIcon();
-        });
-    } else {
-        btn.addEventListener('click', function () {
-            sidebar.classList.toggle('active');
-            updateIcon();
-        });
-    }
+    btn.addEventListener('click', function () {
+        sidemenu.classList.toggle('active');
+        updateIcon();
+    });
 }
 
 // -------------------------------------------------------------------------------------------------------------------------------------------------------------- */
