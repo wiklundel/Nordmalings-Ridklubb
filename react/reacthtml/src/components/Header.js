@@ -4,12 +4,12 @@ class Header extends React.Component {
     render() {
         return (
             <header>
-                <div class="container">
-                    <div class="top-mobile">
-                        <img src="bilder/Logga.png" alt="Logga Nordmalings Ridklubb" class="logo"/>
-                        <iconify-icon icon="ph:list-light" class="btn"></iconify-icon>
+                <div className="container">
+                    <div className="topMobile">
+                        <img src="/bilder/Logga.png" alt="Logga Nordmalings Ridklubb" className="logo"/>
+                        <iconify-icon icon="ph:list-light" className="btn"></iconify-icon>
                     </div>
-                    <ul class="nav">
+                    <ul className="nav">
                         <li><a href="index.html">Hem</a></li>
                         <li><a href="Börja_Rida.html">Ridskola</a></li>
                         <li><a href="Kalender.html">Kalender</a></li>
@@ -18,7 +18,7 @@ class Header extends React.Component {
                         <li><a href="Kontakt.html">Kontakt</a></li>
                     </ul>
 
-                    <div class="social-icons" >
+                    <div className="socialIcons" >
                         <iconify-icon icon="ph:line-vertical-light"></iconify-icon>
                         <a href="https://www.instagram.com/nordmalingsridklubb?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
                             <iconify-icon icon="ph:instagram-logo-light"></iconify-icon>
@@ -29,7 +29,7 @@ class Header extends React.Component {
                         <iconify-icon icon="ph:line-vertical-light"></iconify-icon>
                         <iconify-icon icon="ph:magnifying-glass-light"></iconify-icon>
                     </div>
-                </div>      
+                </div>
             </header>
         );
     }

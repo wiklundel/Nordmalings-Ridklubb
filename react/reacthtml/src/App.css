@@ -18,15 +18,11 @@ body {
   margin: 0 auto;
 }
 
-section {
-  margin: 2rem 0;
-}
-
 .wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  padding-top: 5rem;
+  padding-top: 6.6rem;
 }
 
 iconify-icon {
@@ -70,10 +66,6 @@ header .container{
   color: #fff;
 }
 
-#Sidemenu {
-  opacity: 0;
-}
-
 .sidemenu.active {
   width: 350px;
   opacity: 1;
@@ -81,14 +73,10 @@ header .container{
 }
 
 .btn {
-  opacity: 0;
+  display: none;
 }
 
-#btnBörjaRida {
-  opacity: 1;
-}
-
-.top-mobile {
+.topMobile {
   display: flex;
   align-items: center;
   height: 100%;
@@ -136,18 +124,13 @@ header .container{
   border-radius: .8rem;
 }
 
-.sidemenu .nav-item {
+.sidemenu .navItem {
   opacity: 0;
 }
 
-.sidemenu.active .nav-item {
+.sidemenu.active .navItem {
   opacity: 1;
 }
-
-
-
-
-
 
 a {
   color: inherit;
@@ -189,19 +172,18 @@ button {
   height: 4.35rem;
 }
 
-.social-icons {
+.socialIcons {
   display: flex;
-  margin: auto 0;
   gap: 1rem;
 }
 
-.block-row {
+.blockRow {
   display: flex;
   justify-content: space-around;
   margin-top: 2rem;
 }
 
-.block-column {
+.blockColumn {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -237,7 +219,6 @@ footer {
   bottom: 0;
   width: 100%;
   color: #F0E6DB;
-  margin-top: 50px;
   align-items: center;
   justify-content: center;
   justify-items: center;
@@ -248,25 +229,25 @@ footer {
 /* -------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 /* Startsida */
 
-.bakgrund-startsida {
-  background-image: url('/public/bilder/Hero_Startsida.png');
+.bakgrundStartsida {
+  background-image: url('/public/bilder/HeroStartsida.png');
   background-attachment: fixed;
   background-position: top;
   background-size: cover;
   height: 100%;
 }
 
-.block1-startsida {
+.block1Startsida {
   display: flex;
   flex-direction: column;
   row-gap: .6rem;
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 8rem auto;
+  margin: 170px auto 0;
 }
 
-.button-startsida {
+.buttonStartsida {
   display: grid;
   grid-template-columns: auto auto;
   gap: 5rem 10rem;
@@ -274,7 +255,7 @@ footer {
   align-items: center;
 }
 
-.button-startsida > a {
+.buttonStartsida > a {
   background-color: rgba(241, 231, 219, 0.25);
   width: 19rem;
   height: 3.1rem;
@@ -294,7 +275,7 @@ h1 {
   color: white;
 }
 
-.block1-startsida p {
+.block1Startsida p {
   font-size: 1.125rem;
   color: white;
 }
@@ -303,20 +284,20 @@ h1 {
 /* -------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 /* Våra Hästar */
 
-.bakgrund-VåraHästar {
+.bakgrundVaraHastar {
   background-image: url('/public/Former/63.png');
   background-size: cover;
   background-attachment: fixed;
 }
 
-.hästar {
+.hastar {
   display: flex;
   padding-left: .6rem;
   gap: 3rem 6rem;
   margin-top: 1rem;
 }
 
-.hästbilder {
+.hastbilder {
   display: grid;
   gap: 1.25rem 1.9rem;
   grid-template-columns: 190px 190px 190px;
@@ -324,20 +305,20 @@ h1 {
   margin-top: .5rem;
 }
 
-.hästbilder > div {
+.hastbilder > div {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
   background-color: white;
   padding: .6rem;
 }
 
-.img-hästar-VåraHästar img {
+.imgHastarVaraHastar img {
   height: 15.6rem;
 }
 
 /* -------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 /* Om Oss */
 
-.hero-om-oss {
+.heroOmOss {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -358,12 +339,12 @@ h1 {
   align-items: baseline; 
 }
 
-.textrutor-styrelsen{
+.textrutorStyrelsen{
   display: flex;
   gap: 0 4rem;
 }
 
-#block-US{
+#blockUS{
   align-items: flex-start;
 }
 
@@ -373,7 +354,7 @@ h1 {
 }
 
 /* Horisontell linje */
-.horisontell-linje1 {
+.horisontellLinje1 {
   width: 85vw;
   height: 1px;
   background-color: rgb(0, 0, 0, 0.2);
@@ -395,7 +376,7 @@ h1 {
 /* -------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 /* Tävling */
 
-.vertical-line3 {
+.verticalLine3 {
   width: 1px;
   height: 70vh;
   margin: 0 5rem;
@@ -415,7 +396,7 @@ video {
   font-size: .8rem;
 }
 
-.block-column span {
+.blockColumn span {
   font-weight: bolder;
 }
 
@@ -443,7 +424,7 @@ th, td {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.bakgrund-text{
+.bakgrundText{
   background-color: rgba(240, 230, 219, 0.7);
   border-radius: 5px;
   width: fit-content;
@@ -453,14 +434,14 @@ th, td {
   margin-right: 0;
 }
 
-.ellipse-text {
+.ellipseText {
   display: flex;
   justify-content: space-between;
   align-items: start;
   margin: 8rem 1rem 6rem;
 }
 
-.ellipse-text div{
+.ellipseText div{
   background-color: rgba(240, 230, 219, 0.7);
   border-radius: 50%;
   width: 100%;
@@ -468,7 +449,7 @@ th, td {
   padding: 2rem;
 }
 
-.ellipse-text h2 {
+.ellipseText h2 {
   padding-left: 3.5rem;
   padding-bottom: .4rem;
   font-family: 'Afacad';
@@ -476,28 +457,28 @@ th, td {
   width: fit-content;
 }
 
-.ellipse-text p {
+.ellipseText p {
   font-size: 1.3vw;
   text-align: center;
   align-items: center;
 }
 
-.ellipse-text span {
+.ellipseText span {
   font-style: italic;
 }
 
-.ellipse-text div:first-child {
+.ellipseText div:first-child {
   transform: translateY(-20%); 
 }
 
-.ellipse-text div:last-child {
+.ellipseText div:last-child {
   transform: translateY(20%);
 }
 
 /* -------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 /* Kontakt */
 
-.hitta-hit div {
+.hittaHit div {
   display: flex;
   gap: 1rem;
   margin: 1rem;
@@ -537,21 +518,21 @@ textarea {
   cursor: pointer;
 }
 
-.formmargin {
+.formMargin {
   margin: 0 1.5rem;
 }
 
-.formmargin h3 {
+.formMargin h3 {
   text-align: center;
 }
 
-.center-form {
+.centerForm {
   padding: 0;
 }
 
 /* -------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 /* Kalender */
-.img-kalender {
+.imgKalender {
   width: 70vw;
   margin: 0 auto;
 }
@@ -561,11 +542,11 @@ textarea {
 
 @media screen and (max-width: 1200px){
 
-  .block-row {
+  .blockRow {
       flex-direction: column;
   }
 
-  .block-column {
+  .blockColumn {
       gap: 1rem;
       margin: 0 3rem;
   }
@@ -574,8 +555,8 @@ textarea {
   .logo {
       margin: 0 1rem;
   }
-  .social-icons {
-      margin: auto  1rem;
+  .socialIcons {
+      margin-right: 4%;
   }
 
   section .container {
@@ -590,12 +571,12 @@ textarea {
   }
 
   /* Våra Hästar*/
-  .hästar {
+  .hastar {
       flex-direction: column;
   }
 
   /*Tävling*/
-  .vertical-line3 {
+  .verticalLine3 {
       width: 85vw;
       height: 1px;
       margin: 3rem auto;
@@ -607,13 +588,13 @@ textarea {
 
 
   /*Kontakt*/
-  .hitta-hit {
+  .hittaHit {
       justify-items: center;
       text-align: center;
       margin: 0 auto;
   }
 
-  .center-form {
+  .centerForm {
       margin: auto auto;
   }
 }
@@ -628,31 +609,27 @@ textarea {
   icconi-icon {
       font-size: 1rem;
   }
-  
-  #sidemenu {
-      opacity: 1;
-  }
-
-  #sidemenuBörjaRida {
-      opacity: 0;
-  }
 
   .btn {
       opacity: 1;
   }
 
-  .button-startsida {
+  .buttonStartsida {
       grid-template-columns: auto;
       gap: 3rem;
       margin-top: 5rem;
   }
   
-  .block1-startsida p {
+  .block1Startsida p {
       font-size: 1rem;
   }
 
+  .socialIcons {
+    margin-right: 6%;
+  }
+
   /*Tävling*/
-  .block-column {
+  .blockColumn {
       align-items: center;
   }
 
@@ -662,12 +639,12 @@ textarea {
       gap: 2rem;
       margin: 0 auto;
   }
-  .textrutor-styrelsen {
+  .textrutorStyrelsen {
       flex-direction: column;
       align-items: center;
       gap: 2rem;
   }
-  .textrutor-styrelsen p {
+  .textrutorStyrelsen p {
       text-align: center;
   }
 
@@ -683,22 +660,22 @@ textarea {
 
   /*Börja Rida*/
 
-  .ellipse-text {
+  .ellipseText {
       flex-direction: column;
       justify-content: center;
       margin: 4rem 0;
       gap: 1rem;
   }
 
-  .ellipse-text div{
+  .ellipseText div{
       width: 40%;
   }
 
-  .ellipse-text div:first-child {
+  .ellipseText div:first-child {
       transform: translateY(0); 
   }
   
-  .ellipse-text div:last-child {
+  .ellipseText div:last-child {
       transform: translateY(0);
   }
   
@@ -706,18 +683,14 @@ textarea {
 
 @media screen and (max-width: 600px) {
 
-  .block-column {
+  .blockColumn {
       margin: 0 1rem;
   }
 
   /* Våra Hästar - Mobil*/
-  .img-hästar-VåraHästar {
+  .imgHastarVaraHastar {
       grid-template-columns: 190px 190px;
   }
-
-  /*Om Oss*/
-
-
 
 }
 
