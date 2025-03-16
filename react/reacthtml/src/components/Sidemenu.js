@@ -1,45 +1,47 @@
 import React from "react";
 
+import {NavLink} from "react-router-dom";
+
 class Sidemenu extends React.Component {
     render () {
         return (
-            <div className="sidemenu">
+            <div className={`sidemenu ${isActive ? "active" : ""}`}>
                 <ul>
                     <li>
-                        <a href="index.html">
+                        <NavLink to="/" className={({ isActive }) => isActive ? "active-link" : ""}>
                             <iconify-icon icon="ph:house-light"></iconify-icon>
                             <span className="navItem">Hem</span>
-                        </a>
+                        </NavLink>
                     </li>
                     <li>
-                        <a href="BorjaRida.html">
+                        <NavLink to="/BorjaRida" className={({ isActive }) => isActive ? "active-link" : ""}>
                             <iconify-icon icon="ph:horse-light"></iconify-icon>
                             <span className="navItem">Ridskola</span>
-                        </a>
+                        </NavLink>
                     </li>
                     <li>
-                        <a href="Kalender.html">
+                        <NavLink to="/Kalender" className={({ isActive }) => isActive ? "active-link" : ""}>
                             <iconify-icon icon="ph:calendar-blank-light"></iconify-icon>
                             <span className="navItem">Kalender</span>
-                        </a>
+                        </NavLink>
                     </li>
                     <li>
-                        <a href="Tavling.html">
+                        <NavLink to="/Tavling" className={({ isActive }) => isActive ? "active-link" : ""}>
                             <iconify-icon icon="ion:ribbon-outline"></iconify-icon>
                             <span className="navItem">Tävling</span>
-                        </a>
+                        </NavLink>
                     </li>
                     <li>
-                        <a href="OmOss.html">
+                        <NavLink to="/OmOss" className={({ isActive }) => isActive ? "active-link" : ""}>
                             <iconify-icon icon="system-uicons:info-circle"></iconify-icon>
                             <span className="navItem">Om Oss</span>
-                        </a>
+                        </NavLink>
                     </li>
                     <li>
-                        <a href="Kontakt.html">
+                        <NavLink to="/Kontakt" className={({ isActive }) => isActive ? "active-link" : ""}>
                             <iconify-icon icon="ph:chat-light"></iconify-icon>
                             <span className="navItem">Kontakt</span>
-                        </a>
+                        </NavLink>
                     </li>
                 </ul>
             </div>

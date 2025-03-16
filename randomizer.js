@@ -14,7 +14,7 @@ if (form) {
 // Shuffla hästbilder
   function shuffleImg() {
     
-    const containers = document.getElementsByClassName("hästbilder");
+    const containers = document.getElementsByClassName("hastbilder");
     if(containers) {
         for (let container of containers) {
             const items = Array.from(container.children); // Convert HTMLCollection to an array
@@ -53,6 +53,8 @@ if(btn && sidemenu) {
         sidemenu.classList.toggle('active');
         updateIcon();
     });
+} else {
+    console.log('btn or sidemenu not found');
 }
 
 // -------------------------------------------------------------------------------------------------------------------------------------------------------------- */

@@ -1,5 +1,7 @@
 import React from "react";
 
+import {NavLink} from "react-router-dom";
+
 class Header extends React.Component {
     render() {
         return (
@@ -7,25 +9,30 @@ class Header extends React.Component {
                 <div className="container">
                     <div className="topMobile">
                         <img src="/bilder/Logga.png" alt="Logga Nordmalings Ridklubb" className="logo"/>
-                        <iconify-icon icon="ph:list-light" className="btn"></iconify-icon>
+                        <iconify-icon 
+                            className="btn" 
+                            icon={this.props.isActive ? "ph:caret-double-left-light" : "ph:list-light"} 
+                            onClick={this.props.toggleSidebar}
+                        ></iconify-icon>
+
                     </div>
                     <ul className="nav">
-                        <li><a href="index.html">Hem</a></li>
-                        <li><a href="Börja_Rida.html">Ridskola</a></li>
-                        <li><a href="Kalender.html">Kalender</a></li>
-                        <li><a href="Tävling.html">Tävling</a></li>
-                        <li><a href="Om_Oss.html">Om Oss</a></li>
-                        <li><a href="Kontakt.html">Kontakt</a></li>
+                        <li><NavLink to="/">Hem</NavLink></li>
+                        <li><NavLink to="/BorjaRida">Ridskola</NavLink></li>
+                        <li><NavLink to="/Kalender">Kalender</NavLink></li>
+                        <li><NavLink to="/Tavling">Tävling</NavLink></li>
+                        <li><NavLink to="/OmOss">Om Oss</NavLink></li>
+                        <li><NavLink to="/Kontakt">Kontakt</NavLink></li>
                     </ul>
 
                     <div className="socialIcons" >
                         <iconify-icon icon="ph:line-vertical-light"></iconify-icon>
-                        <a href="https://www.instagram.com/nordmalingsridklubb?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                        <NavLink to="https://www.instagram.com/nordmalingsridklubb?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
                             <iconify-icon icon="ph:instagram-logo-light"></iconify-icon>
-                        </a>
-                        <a href="https://www.facebook.com/nordmalingsridklubb">
+                        </NavLink>
+                        <NavLink to="https://www.facebook.com/nordmalingsridklubb">
                             <iconify-icon icon="ph:facebook-logo-light"></iconify-icon>
-                        </a>
+                        </NavLink>
                         <iconify-icon icon="ph:line-vertical-light"></iconify-icon>
                         <iconify-icon icon="ph:magnifying-glass-light"></iconify-icon>
                     </div>

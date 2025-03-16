@@ -3,7 +3,7 @@ import React from 'react';
 class Tavling extends React.Component {
     render () {
         return (
-            <section>
+            <section className='wrapper'>
                 <div className="container">
                     <h2>Tävling</h2>
                     <div className="blockRow">
@@ -27,31 +27,33 @@ class Tavling extends React.Component {
                             <div>
                                 <h3>Kommande tävlingar</h3>
                                 <table>
-                                    <tr>
-                                        <th>Vecka</th>
-                                        <th>Inriktning</th>
-                                        <th>Storhäst/Ponny</th>
-                                    </tr>
-                                    <tr>
-                                        <td>v.6</td>
-                                        <td>Hoppning</td>
-                                        <td>Storhäst & Ponny</td>
-                                    </tr>
-                                    <tr>
-                                        <td>v.17</td>
-                                        <td>Dressyr</td>
-                                        <td>Ponny</td>
-                                    </tr>
-                                    <tr>
-                                        <td>v.22</td>
-                                        <td>Färlttävlan</td>
-                                        <td>Storhäst</td>
-                                    </tr>
-                                    <tr>
-                                        <td>v.35</td>
-                                        <td>Sommarhoppet - klubbtävling</td>
-                                        <td>Stohäst & Ponny</td>
-                                    </tr>
+                                    <tbody> 
+                                        <tr>
+                                            <th>Vecka</th>
+                                            <th>Inriktning</th>
+                                            <th>Storhäst/Ponny</th>
+                                        </tr>
+                                        <tr>
+                                            <td>v.6</td>
+                                            <td>Hoppning</td>
+                                            <td>Storhäst & Ponny</td>
+                                        </tr>
+                                        <tr>
+                                            <td>v.17</td>
+                                            <td>Dressyr</td>
+                                            <td>Ponny</td>
+                                        </tr>
+                                        <tr>
+                                            <td>v.22</td>
+                                            <td>Färlttävlan</td>
+                                            <td>Storhäst</td>
+                                        </tr>
+                                        <tr>
+                                            <td>v.35</td>
+                                            <td>Sommarhoppet - klubbtävling</td>
+                                            <td>Stohäst & Ponny</td>
+                                        </tr>
+                                    </tbody>
                                 </table>
                             </div>
                         </section>

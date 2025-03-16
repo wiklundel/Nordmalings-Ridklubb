@@ -23,6 +23,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   padding-top: 6.6rem;
+  padding-bottom: 2rem;
 }
 
 iconify-icon {
@@ -62,8 +63,8 @@ header .container{
   padding: .4rem 1rem;
   transition: all 0.5s ease;
   line-height: 50px;
-  opacity: 0;
   color: #fff;
+  display: none;
 }
 
 .sidemenu.active {
@@ -74,6 +75,12 @@ header .container{
 
 .btn {
   display: none;
+  border: none;
+  background-color: unset;
+}
+
+.active-link {
+  font-weight: 600;
 }
 
 .topMobile {
@@ -97,11 +104,11 @@ header .container{
 }
 
 .sidemenu p {
-  opacity: 0;
+  display: none;
 }
 
 .sidemenu.active p {
-  opacity: 1;
+  display: block;
 }
 
 .sidemenu.active ul li a {
@@ -222,7 +229,7 @@ footer {
   align-items: center;
   justify-content: center;
   justify-items: center;
-  height: 8vh;
+  height: 4.6rem;
 }
 
 
@@ -331,6 +338,7 @@ h1 {
   height: 30rem;
   width: 100vw;
   margin: 0 auto;
+  margin-bottom: 2rem;
 }
 
 .textrutor {
@@ -610,8 +618,16 @@ textarea {
       font-size: 1rem;
   }
 
+  .sidemenu {
+      display: block;
+  }
+  
   .btn {
-      opacity: 1;
+      display: block;
+  }
+
+  .btn:hover {
+      box-shadow: none;
   }
 
   .buttonStartsida {

@@ -3,7 +3,7 @@ import React from "react";
 class VaraHastar extends React.Component {
     render () {
         return (
-            <section>
+            <section className="wrapper">
                 <div className="container">
                     <h2>Våra Hästar</h2>
                     <div className="hastar">
