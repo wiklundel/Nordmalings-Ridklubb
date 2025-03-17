@@ -5,7 +5,7 @@ import {NavLink} from "react-router-dom";
 class Header extends React.Component {
     render() {
         return (
-            <header>
+            <header className={isScrolled ? 'scrolled' : ''}>
                 <div className="container">
                     <div className="topMobile">
                         <img src="/bilder/Logga.png" alt="Logga Nordmalings Ridklubb" className="logo"/>
