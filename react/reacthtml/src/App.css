@@ -1,12 +1,10 @@
-
-
 /* Grundläggande reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Afacad';
-  letter-spacing: .1rem;
+  font-family: "Afacad";
+  letter-spacing: 0.1rem;
 }
 
 body {
@@ -14,7 +12,7 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
@@ -40,12 +38,16 @@ header {
   color: #383055;
 }
 
+.activeLink {
+  text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+}
+
 header.scrolled {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
 }
 
-header .container{
+header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -55,12 +57,12 @@ header .container{
 
 .sidemenu {
   position: fixed;
-  width: 0;
+  transform: translateX(-350px);
   left: 0;
   bottom: 0;
   height: calc(100vh - 4.6rem);
-  background-color: #4E4E4E;
-  padding: .4rem 1rem;
+  background-color: #4e4e4e;
+  padding: 0.4rem 1rem;
   transition: all 0.5s ease;
   line-height: 50px;
   color: #fff;
@@ -68,6 +70,7 @@ header .container{
 }
 
 .sidemenu.active {
+  transform: translateX(0);
   width: 350px;
   opacity: 1;
   z-index: 1000;
@@ -77,10 +80,6 @@ header .container{
   display: none;
   border: none;
   background-color: unset;
-}
-
-.active-link {
-  font-weight: 600;
 }
 
 .topMobile {
@@ -103,14 +102,6 @@ header .container{
   margin: 1.8rem auto;
 }
 
-.sidemenu p {
-  display: none;
-}
-
-.sidemenu.active p {
-  display: block;
-}
-
 .sidemenu.active ul li a {
   display: flex;
   gap: 0 1.3rem;
@@ -127,16 +118,9 @@ header .container{
 
 .sidemenu.active ul li a:hover {
   background: #ffffff;
-  color: #4E4E4E;
-  border-radius: .8rem;
-}
-
-.sidemenu .navItem {
-  opacity: 0;
-}
-
-.sidemenu.active .navItem {
-  opacity: 1;
+  color: #4e4e4e;
+  border-radius: 0.8rem;
+  text-shadow: none;
 }
 
 a {
@@ -212,7 +196,7 @@ h4 {
   font-weight: lighter;
   color: #383055;
   font-size: 2.25rem;
-  background-color:  rgba(240, 230, 219, 0.7);
+  background-color: rgba(240, 230, 219, 0.7);
   padding: 0.5rem 2rem 0.5rem 120px;
   border-radius: 3px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -222,22 +206,21 @@ h4 {
 
 footer {
   display: flex;
-  background-color: #4E4E4E;
+  background-color: #4e4e4e;
   bottom: 0;
   width: 100%;
-  color: #F0E6DB;
+  color: #f0e6db;
   align-items: center;
   justify-content: center;
   justify-items: center;
   height: 4.6rem;
 }
 
-
 /* -------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 /* Startsida */
 
 .bakgrundStartsida {
-  background-image: url('/public/bilder/HeroStartsida.png');
+  background-image: url("/public/bilder/HeroStartsida.png");
   background-attachment: fixed;
   background-position: top;
   background-size: cover;
@@ -247,7 +230,7 @@ footer {
 .block1Startsida {
   display: flex;
   flex-direction: column;
-  row-gap: .6rem;
+  row-gap: 0.6rem;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -287,19 +270,17 @@ h1 {
   color: white;
 }
 
-
 /* -------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 /* Våra Hästar */
 
 .bakgrundVaraHastar {
-  background-image: url('/public/Former/63.png');
+  background-image: url("/public/Former/63.png");
   background-size: cover;
   background-attachment: fixed;
 }
 
 .hastar {
   display: flex;
-  padding-left: .6rem;
   gap: 3rem 6rem;
   margin-top: 1rem;
 }
@@ -307,19 +288,51 @@ h1 {
 .hastbilder {
   display: grid;
   gap: 1.25rem 1.9rem;
-  grid-template-columns: 190px 190px 190px;
+  grid-template-columns: 160px 160px 160px;
   text-align: center;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
 }
 
-.hastbilder > div {
+.hastbilder div {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
   background-color: white;
-  padding: .6rem;
+  padding: 0.6rem;
 }
 
-.imgHastarVaraHastar img {
-  height: 15.6rem;
+.hastbilder div p {
+  padding-top: 0.6rem;
+}
+
+.hastbilder img {
+  width: 100%;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Mörklägger bakgrunden */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+
+.hastbilder div.pop {
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%) scale(0.6);
+  position: absolute;
+  z-index: 100;
+  transition: all 0.5s ease;
+  padding: 1.2rem;
+}
+
+.hastbilder div.pop p {
+  padding-top: 1rem;
+  font-size: 2.1rem;
 }
 
 /* -------------------------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -330,7 +343,7 @@ h1 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: url('/public/bilder/Nordmalings_Ridklubb1.png');
+  background-image: url("/public/bilder/Nordmalings_Ridklubb1.png");
   background-attachment: scroll;
   background-position: center;
   background-size: cover;
@@ -344,15 +357,15 @@ h1 {
 .textrutor {
   display: flex;
   gap: 0 5rem;
-  align-items: baseline; 
+  align-items: baseline;
 }
 
-.textrutorStyrelsen{
+.textrutorStyrelsen {
   display: flex;
   gap: 0 4rem;
 }
 
-#blockUS{
+#blockUS {
   align-items: flex-start;
 }
 
@@ -375,11 +388,10 @@ h1 {
   margin: 0.3rem 0;
 }
 
-.block2 img{
+.block2 img {
   height: 30hv;
-  margin-right: .5rem;
+  margin-right: 0.5rem;
 }
-
 
 /* -------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 /* Tävling */
@@ -401,7 +413,7 @@ video {
 
 #videotext {
   color: rgb(0, 0, 0, 0.4);
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .blockColumn span {
@@ -409,10 +421,11 @@ video {
 }
 
 table {
-  border-spacing: .5rem;
+  border-spacing: 0.5rem;
 }
 
-th, td {
+th,
+td {
   text-align: left;
   margin-bottom: 1rem;
 }
@@ -422,23 +435,23 @@ th, td {
 
 .registrera {
   background-color: #383055;
-  color: #F0E6DB;
+  color: #f0e6db;
   font-size: 1.2rem;
   border-radius: 5px;
   text-align: center;
   margin: 2rem auto;
-  padding: .9rem 2rem;
+  padding: 0.9rem 2rem;
   width: fit-content;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.bakgrundText{
+.bakgrundText {
   background-color: rgba(240, 230, 219, 0.7);
   border-radius: 5px;
   width: fit-content;
   text-align: right;
   align-content: center;
-  padding: .8rem 2rem;
+  padding: 0.8rem 2rem;
   margin-right: 0;
 }
 
@@ -449,7 +462,7 @@ th, td {
   margin: 8rem 1rem 6rem;
 }
 
-.ellipseText div{
+.ellipseText div {
   background-color: rgba(240, 230, 219, 0.7);
   border-radius: 50%;
   width: 100%;
@@ -459,8 +472,8 @@ th, td {
 
 .ellipseText h2 {
   padding-left: 3.5rem;
-  padding-bottom: .4rem;
-  font-family: 'Afacad';
+  padding-bottom: 0.4rem;
+  font-family: "Afacad";
   font-size: 5vw;
   width: fit-content;
 }
@@ -476,7 +489,7 @@ th, td {
 }
 
 .ellipseText div:first-child {
-  transform: translateY(-20%); 
+  transform: translateY(-20%);
 }
 
 .ellipseText div:last-child {
@@ -502,21 +515,22 @@ form {
   margin-bottom: 5rem;
 }
 
-form input, textarea {
+form input,
+textarea {
   width: 26.8rem;
   min-height: 1.8rem;
   height: auto;
-  background-color: #F0E6DB;
+  background-color: #f0e6db;
   border: none;
   border-radius: 3px;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   resize: vertical;
   margin: 1.5rem 0;
 }
 
 textarea {
   field-sizing: content;
-  max-height: calc(10lh + .5rem);
+  max-height: calc(10lh + 0.5rem);
   min-height: 5lh;
   width: 100%;
 }
@@ -548,96 +562,109 @@ textarea {
 /* -------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 /* Responsivitet - Mobil */
 
-@media screen and (max-width: 1200px){
-
+@media screen and (max-width: 1200px) {
   .blockRow {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .blockColumn {
-      gap: 1rem;
-      margin: 0 3rem;
+    gap: 1rem;
+    margin: 0 3rem;
   }
 
   /*Header*/
   .logo {
-      margin: 0 1rem;
+    margin: 0 1rem;
   }
   .socialIcons {
-      margin-right: 4%;
+    margin-right: 4%;
   }
 
   section .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 2rem;
   }
 
   h3 {
-      text-align: center;
+    text-align: center;
   }
 
   /* Våra Hästar*/
   .hastar {
-      flex-direction: column;
+    flex-direction: column;
+  }
+
+  .hastbilder div.pop {
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) scale(0.8);
+
+    position: absolute;
+    z-index: 1;
+    transition: all 0.5s ease;
+    padding: 0.8rem;
+  }
+
+  .hastbilder div.pop p {
+    padding-top: 0.8rem;
+    font-size: 1.2rem;
   }
 
   /*Tävling*/
   .verticalLine3 {
-      width: 85vw;
-      height: 1px;
-      margin: 3rem auto;
+    width: 85vw;
+    height: 1px;
+    margin: 3rem auto;
   }
 
   video {
-      width: 100%;
+    width: 100%;
   }
-
 
   /*Kontakt*/
   .hittaHit {
-      justify-items: center;
-      text-align: center;
-      margin: 0 auto;
+    justify-items: center;
+    text-align: center;
+    margin: 0 auto;
   }
 
   .centerForm {
-      margin: auto auto;
+    margin: auto auto;
   }
 }
 
 @media screen and (max-width: 900px) {
-
   /*Menu*/
   header li {
-      display: none;
+    display: none;
   }
 
   icconi-icon {
-      font-size: 1rem;
+    font-size: 1rem;
   }
 
   .sidemenu {
-      display: block;
+    display: block;
   }
-  
+
   .btn {
-      display: block;
+    display: block;
   }
 
   .btn:hover {
-      box-shadow: none;
+    box-shadow: none;
   }
 
   .buttonStartsida {
-      grid-template-columns: auto;
-      gap: 3rem;
-      margin-top: 5rem;
+    grid-template-columns: auto;
+    gap: 3rem;
+    margin-top: 5rem;
   }
-  
+
   .block1Startsida p {
-      font-size: 1rem;
+    font-size: 1rem;
   }
 
   .socialIcons {
@@ -646,67 +673,79 @@ textarea {
 
   /*Tävling*/
   .blockColumn {
-      align-items: center;
+    align-items: center;
   }
 
   /*Om Oss*/
   .textrutor {
-      flex-direction: column;
-      gap: 2rem;
-      margin: 0 auto;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0 auto;
   }
   .textrutorStyrelsen {
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
   }
   .textrutorStyrelsen p {
-      text-align: center;
+    text-align: center;
   }
 
   h4 {
-      padding: 0.5rem 2rem;
-      transform: translateX(0);
-      align-items: center;
+    padding: 0.5rem 2rem;
+    transform: translateX(0);
+    align-items: center;
   }
 
   h3 {
-      align-self: center;
+    align-self: center;
   }
 
   /*Börja Rida*/
 
   .ellipseText {
-      flex-direction: column;
-      justify-content: center;
-      margin: 4rem 0;
-      gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    margin: 4rem 0;
+    gap: 1rem;
   }
 
-  .ellipseText div{
-      width: 40%;
+  .ellipseText div {
+    width: 40%;
   }
 
   .ellipseText div:first-child {
-      transform: translateY(0); 
+    transform: translateY(0);
   }
-  
+
   .ellipseText div:last-child {
-      transform: translateY(0);
+    transform: translateY(0);
   }
-  
 }
 
 @media screen and (max-width: 600px) {
-
   .blockColumn {
-      margin: 0 1rem;
+    margin: 0 1rem;
   }
 
   /* Våra Hästar - Mobil*/
-  .imgHastarVaraHastar {
-      grid-template-columns: 190px 190px;
+  .hastbilder {
+    grid-template-columns: 190px 190px;
   }
 
-}
+  .hastbilder div.pop {
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) scale(1.2);
 
+    position: absolute;
+    z-index: 1;
+    transition: all 0.5s ease;
+    padding: 0.8rem;
+  }
+
+  .hastbilder div.pop p {
+    padding-top: 0.8rem;
+    font-size: 1.2rem;
+  }
+}
